@@ -4,7 +4,7 @@
 
 ## 说明
 
-为了简化sdk，本项目仅有一个cs类文件，封装了payjs常用接口的调用、生成sign、验sign、发生请求等功能。
+为了简化sdk，本项目仅有一个cs类文件，封装了payjs常用接口的调用、生成sign、验sign、发送请求等功能。
 
 **不包含**响应结果的格式化功能，需要自行处理json字符串，推荐使用https://github.com/JamesNK/Newtonsoft.Json
 
@@ -122,5 +122,14 @@ string jsonString = pay.user(param);
 ```c#
 //返回原始json字符串
 string jsonString = pay.info(new Dictionary<string, string>());
+```
+
+#### 11、PAYJS回调请求的验签
+
+```c#
+//param参数为PAYJS服务器POST过来的数据，根据自己项目中所用的框架获取POST数据后，转为Dictionary<string,string>类型传入notifyCheck方法
+
+//返回是否验证成功
+bool issuccess = pay.notifyCheck(param);
 ```
 
