@@ -146,7 +146,7 @@ namespace PayJSDemo
         {
             param.Add("mchid", this.mchid);
             //去掉空的，排序
-            Dictionary<string, string> newParam = param.Where(w => w.Key.Trim() != "").
+            Dictionary<string, string> newParam = param.Where(w => w.Value.Trim() != "").
                 OrderBy(o => o.Key).ToDictionary(d => d.Key, d => d.Value);
             string paramStr = "";
             //拼接
