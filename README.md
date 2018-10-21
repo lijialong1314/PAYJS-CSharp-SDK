@@ -135,7 +135,7 @@ bool issuccess = pay.notifyCheck(param);
 
 #### 12、人脸支付
 
-```
+```c#
 Dictionary<string, string> param = new Dictionary<string, string>();
 param["total_fee"] = "1";
 param["out_trade_no"] = DateTime.Now.Ticks.ToString();
