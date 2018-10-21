@@ -133,3 +133,17 @@ string jsonString = pay.info(new Dictionary<string, string>());
 bool issuccess = pay.notifyCheck(param);
 ```
 
+#### 12、人脸支付
+
+```
+Dictionary<string, string> param = new Dictionary<string, string>();
+param["total_fee"] = "1";
+param["out_trade_no"] = DateTime.Now.Ticks.ToString();
+param["body"] = "test";
+param["attch"] = "user id";
+param["face_code"] = "YOUR face_code";
+param["openid"] = "user's openid";
+
+string jsonString = pay.facepay(param);
+```
+
