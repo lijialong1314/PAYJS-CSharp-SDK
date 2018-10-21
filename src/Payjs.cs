@@ -11,7 +11,7 @@ namespace PayJSDemo
 {
     class Payjs
     {
-        private string[] apiList = new string[] { "native", "cashier", "jsapi", "micropay", "refund", "close", "user", "info"};
+        private string[] apiList = new string[] { "native", "cashier", "jsapi", "micropay", "facepay","refund", "close", "user", "info"};
 
         private string mchid;
 
@@ -70,6 +70,17 @@ namespace PayJSDemo
         /// <param name="param"></param>
         /// <returns></returns>
         public string micropay(Dictionary<string, string> param)
+        {
+            string url = this.apiUrl[MethodBase.GetCurrentMethod().Name];
+            return this.post(url, param);
+        }
+        
+        /// <summary>
+        /// 人脸支付
+        /// </summary>
+        /// <param name="param"></param>
+        /// <returns></returns>
+        public string facepay(Dictionary<string, string> param)
         {
             string url = this.apiUrl[MethodBase.GetCurrentMethod().Name];
             return this.post(url, param);
