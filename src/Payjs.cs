@@ -11,7 +11,7 @@ namespace PayJSDemo
 {
     class Payjs
     {
-        private string[] apiList = new string[] { "native", "cashier", "jsapi", "micropay", "facepay","refund", "close", "user", "info"};
+        private string[] apiList = new string[] { "native", "cashier", "jsapi", "micropay", "facepay","refund", "check", "close", "user", "info"};
 
         private string mchid;
 
